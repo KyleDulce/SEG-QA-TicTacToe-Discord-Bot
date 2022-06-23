@@ -19,7 +19,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class Bot implements MessageCreateListener{
 
-    public static DiscordApi api = new DiscordApiBuilder().setToken("OTg3Mzk0MjIzMzc0NDk1Nzg0.GMF6TE.NomqUfV4xaOIhwmvctdsi2QBKFrfp_Bwen6OOA").login().join();
+    public static DiscordApi api = new DiscordApiBuilder().setToken("INSERT BOT TOKEN HERE").login().join();
     public static TextChannel channel = api.getTextChannels().iterator().next();
     public static String[][] gameBoard = new String[3][3];
 

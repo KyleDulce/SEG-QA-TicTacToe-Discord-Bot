@@ -15,6 +15,8 @@ public class BotBoardInteraction implements MessageComponentCreateListener {
                 messageComponentInteraction.createImmediateResponder()
                         .setContent("You clicked a button!")
                         .respond();
+                //make a call to game logic
+                //make a call to update board
                 break;
             case "R1C2":
                 break;
