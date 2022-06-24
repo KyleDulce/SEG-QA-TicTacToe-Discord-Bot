@@ -1,4 +1,5 @@
 package me.segQaGroupTen.discordBot;
+import me.segQaGroupTen.discordBot.config.Configuration;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
 import org.javacord.api.entity.channel.Channel;
@@ -19,7 +20,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class Bot implements MessageCreateListener{
 
-    public static DiscordApi api = new DiscordApiBuilder().setToken("INSERT BOT TOKEN HERE").login().join();
+    public static DiscordApi api = new DiscordApiBuilder().setToken(Configuration.getInstance().getToken()).login().join();
     public static TextChannel channel = api.getTextChannels().iterator().next();
     public static String[][] gameBoard = new String[3][3];
 
@@ -36,7 +37,6 @@ public class Bot implements MessageCreateListener{
             CompletableFuture<Message> messageBuilder =  new MessageBuilder()
                     .append(message)
                     .send(channel);
-
     }
 
     @Override
