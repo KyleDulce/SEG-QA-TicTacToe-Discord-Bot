@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9772c6c-9d8d-4e1d-90ae-db577e651058" name="Changes" comment="">
+    <list default="true" id="bac8b1a3-dbf4-4afb-824c-9a7aa4ba9002" name="Changes" comment="added game logic and integrated it with BotBoardInteraction">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/segQaGroupTen/discordBot/GameLogic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/segQaGroupTen/discordBot/GameLogicResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/segQaGroupTen/discordBot/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/segQaGroupTen/discordBot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/segQaGroupTen/discordBot/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/segQaGroupTen/discordBot/BotBoardInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/segQaGroupTen/discordBot/BotBoardInteraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,5 +73,20 @@
       <updated>1655589091222</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="e21c5104-398f-4e47-ad6a-f97720c086ac">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added game logic and integrated it with BotBoardInteraction" />
+    <option name="LAST_COMMIT_MESSAGE" value="added game logic and integrated it with BotBoardInteraction" />
   </component>
 </project>
