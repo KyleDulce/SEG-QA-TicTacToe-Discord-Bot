@@ -39,7 +39,7 @@
         </dependency>
         <!--https://carleslc.me/Simple-YAML/doc -->
         <dependency>
-            <groupId>me.carleslc.Simple-YAML</groupId>
+            <groupId>com.github.Carleslc</groupId>
             <artifactId>Simple-Yaml</artifactId>
             <version>1.7.3</version>
         </dependency>
