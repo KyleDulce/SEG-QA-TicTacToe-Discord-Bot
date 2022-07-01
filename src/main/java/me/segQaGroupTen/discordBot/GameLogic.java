@@ -20,7 +20,7 @@ public class GameLogic {
         column--;
 
         //If a player token is already in the board[row][column] tell the player they can't play
-        if (gameBoard[row][column].equals(emptyToken)){
+        if (!gameBoard[row][column].equals(emptyToken)){
             return GameLogicResponse.FAILURE;
         }
 
