@@ -73,7 +73,6 @@ public class GameLogic {
         //If row + column == 2 we placed a token in one of the anti-diagonal squares R0C2, R1C1, R2C0
         if (row + column == 2){
             for (int i = 0; i < 3; i++){
-                String test = gameBoard[i][2 - i];
                 if (!gameBoard[i][2 - i].equals(playerToken)) {
                     antiDiagonalCheck = false;
                     break;

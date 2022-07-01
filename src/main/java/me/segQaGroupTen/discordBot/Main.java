@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         ConfigurationManager.loadYamlConfiguration();
         Bot bot = new Bot();
-        Bot.api.addListener(bot);
-        Bot.api.addListener(new BotBoardInteraction());
+        CommandInterface.api.addListener(bot);
+        CommandInterface.api.addListener(new BotBoardInteraction());
     }
 }
