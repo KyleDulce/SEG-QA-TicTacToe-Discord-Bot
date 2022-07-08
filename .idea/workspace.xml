@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bac8b1a3-dbf4-4afb-824c-9a7aa4ba9002" name="Changes" comment="">
+    <list default="true" id="bac8b1a3-dbf4-4afb-824c-9a7aa4ba9002" name="Changes" comment="added game logic and integrated it with BotBoardInteraction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -32,7 +32,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="JUnit.GameLogicTests">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="me.segQaGroupTen.discordBot.Main" />
       <module name="SEG-QA-TicTacToe-Discord-Bot" />
@@ -46,8 +50,57 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ConfigurationManagerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SEG-QA-TicTacToe-Discord-Bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.segQaGroupTen.discordBot.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.segQaGroupTen.discordBot.config" />
+      <option name="MAIN_CLASS_NAME" value="me.segQaGroupTen.discordBot.config.ConfigurationManagerTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameLogicTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SEG-QA-TicTacToe-Discord-Bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.segQaGroupTen.discordBot.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.segQaGroupTen.discordBot.util" />
+      <option name="MAIN_CLASS_NAME" value="me.segQaGroupTen.discordBot.util.GameLogicTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameLogicTests.MakeMove_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SEG-QA-TicTacToe-Discord-Bot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.segQaGroupTen.discordBot.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.segQaGroupTen.discordBot.util" />
+      <option name="MAIN_CLASS_NAME" value="me.segQaGroupTen.discordBot.util.GameLogicTests" />
+      <option name="METHOD_NAME" value="MakeMove_Success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameLogicTests" />
+        <item itemvalue="JUnit.ConfigurationManagerTests" />
+        <item itemvalue="JUnit.GameLogicTests.MakeMove_Success" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -55,7 +108,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a9772c6c-9d8d-4e1d-90ae-db577e651058" name="Changes" comment="" />
+      <changelist id="bac8b1a3-dbf4-4afb-824c-9a7aa4ba9002" name="Changes" comment="added game logic and integrated it with BotBoardInteraction" />
       <created>1655589091222</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
