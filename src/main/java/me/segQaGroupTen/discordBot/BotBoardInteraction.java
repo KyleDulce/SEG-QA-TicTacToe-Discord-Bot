@@ -13,7 +13,7 @@ public class BotBoardInteraction implements MessageComponentCreateListener {
     Player currentPlayer = new Player();
     public String currentresponse;
     public int row = 0;
-    public int column =0;
+    public int column = 0;
     @Override
     public void onComponentCreate(MessageComponentCreateEvent messageComponentCreateEvent) {
         MessageComponentInteraction messageComponentInteraction = messageComponentCreateEvent.getMessageComponentInteraction();

@@ -24,19 +24,7 @@ public class Bot implements MessageCreateListener{
     @Override
     public void onMessageCreate(MessageCreateEvent messageCreateEvent) {
             if (messageCreateEvent.getMessageContent().equalsIgnoreCase("/tictactoe")) {
-                CompletableFuture<Message> message = new MessageBuilder()
-                        .setContent("Play Tic Tac Toe!")
-                        .addComponents(
-                                ActionRow.of(Button.secondary("R1C1", gameBoard[0][0]),
-                                        Button.secondary("R1C2", gameBoard[0][1]),
-                                        Button.secondary("R1C3", gameBoard[0][2])),
-                                ActionRow.of(Button.secondary("R2C1", gameBoard[1][0]),
-                                        Button.secondary("R2C2", gameBoard[1][1]),
-                                        Button.secondary("R2C3", gameBoard[1][2])),
-                                ActionRow.of(Button.secondary("R3C1", gameBoard[2][0]),
-                                        Button.secondary("R3C2", gameBoard[2][1]),
-                                        Button.secondary("R3C3", gameBoard[2][2])))
-                        .send(CommandInterface.channel);
+                updateBoard();
         }
     }
     public static void updateBoard(){
