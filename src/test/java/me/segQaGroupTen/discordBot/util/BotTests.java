@@ -11,7 +11,8 @@ public class BotTests {
 
     @BeforeAll
     public static void setup(){
-        ConfigurationManager.loadYamlConfiguration();}
+        ConfigurationManager.loadYamlConfiguration();
+    }
 
     @Test
     public void testStartBot_noError(){
