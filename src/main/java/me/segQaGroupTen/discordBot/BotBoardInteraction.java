@@ -11,21 +11,30 @@ public class BotBoardInteraction implements MessageComponentCreateListener {
      * (X or O) that is next to move
      */
     Player currentPlayer = new Player();
+    public String currentresponse;
+    public int row = 0;
+    public int column = 0;
     @Override
     public void onComponentCreate(MessageComponentCreateEvent messageComponentCreateEvent) {
         MessageComponentInteraction messageComponentInteraction = messageComponentCreateEvent.getMessageComponentInteraction();
         String customId = messageComponentInteraction.getCustomId();
         currentPlayer.setPlayerID(messageComponentInteraction.getUser().getName());
+        moveLocation(customId);
+        //make a call to game logic
+        //make a call to update board
+        messageComponentInteraction.createImmediateResponder().respond();
+        GameLogicResponse response = GameLogic.makeMove(row,column, currentPlayer, Bot.gameBoard);
+        Bot.updateBoard();
+        handleResponse(response,currentPlayer);
+    }
 
-        int row = 0, column = 0;
-        switch (customId) {
-            //when player click button on board
+    public void moveLocation(String id){
+        switch (id) {
+            //Button player clicked on board
             case "R1C1" -> {
                 row = 1;
                 column = 1;
             }
-            //make a call to game logic
-            //make a call to update board
             case "R1C2" -> {
                 row = 1;
                 column = 2;
@@ -59,25 +68,24 @@ public class BotBoardInteraction implements MessageComponentCreateListener {
                 column = 3;
             }
         }
-
-        messageComponentInteraction.createImmediateResponder().respond();
-        GameLogicResponse response = GameLogic.makeMove(row,column, currentPlayer, Bot.gameBoard);
-        Bot.updateBoard();
-        handleResponse(response,currentPlayer);
     }
 
-    private void handleResponse(GameLogicResponse response, Player currentPlayer){
+    public void handleResponse(GameLogicResponse response, Player currentPlayer){
 
         switch (response) {
-            case FAILURE ->
+            case FAILURE ->{
                     CommandInterface.sendMessages("Sorry " + currentPlayer.playerID + " someone already played on this square");
+                    currentresponse = "Sorry someone already played on this square";
+            }
             case TIE -> {
                 GameLogic.resetGame(Bot.gameBoard);
                 CommandInterface.sendMessages("The game is a tie! Good game");
+                currentresponse = "The game is a tie! Good game";
             }
             case WIN -> {
                 GameLogic.resetGame(Bot.gameBoard);
                 CommandInterface.sendMessages(currentPlayer.playerID + " won. Good game!");
+                currentresponse = "won. Good game!";
             }
         }
     }
