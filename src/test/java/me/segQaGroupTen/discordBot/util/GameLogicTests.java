@@ -112,4 +112,30 @@ public class GameLogicTests {
 
         assertEquals(GameLogicResponse.TIE, response);
     }
+
+    @Test
+    public void InvalidRow(){
+        GameLogicResponse response;
+
+        //Try to make illegal move in row 0
+        response = GameLogic.makeMove(0,1,player,gameBoard);
+        assertEquals(GameLogicResponse.ERROR, response);
+
+        //Try to male illegal move in row 4
+        response = GameLogic.makeMove(4,1,player,gameBoard);
+        assertEquals(GameLogicResponse.ERROR, response);
+    }
+
+    @Test
+    public void InvalidColumn(){
+        GameLogicResponse response;
+
+        //Try to make illegal move in row 0
+        response = GameLogic.makeMove(1,0,player,gameBoard);
+        assertEquals(GameLogicResponse.ERROR, response);
+
+        //Try to male illegal move in row 4
+        response = GameLogic.makeMove(1,4,player,gameBoard);
+        assertEquals(GameLogicResponse.ERROR, response);
+    }
 }
