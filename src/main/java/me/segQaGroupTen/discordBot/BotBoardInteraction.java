@@ -1,8 +1,10 @@
 package me.segQaGroupTen.discordBot;
 
 import org.javacord.api.event.interaction.MessageComponentCreateEvent;
-import org.javacord.api.interaction.MessageComponentInteraction;
+import org.javacord.api.interaction.callback.InteractionOriginalResponseUpdater;
 import org.javacord.api.listener.interaction.MessageComponentCreateListener;
+
+import java.util.concurrent.CompletableFuture;
 
 public class BotBoardInteraction implements MessageComponentCreateListener {
 
@@ -14,15 +16,15 @@ public class BotBoardInteraction implements MessageComponentCreateListener {
     public String currentresponse;
     public int row = 0;
     public int column = 0;
+
     @Override
     public void onComponentCreate(MessageComponentCreateEvent messageComponentCreateEvent) {
-        MessageComponentInteraction messageComponentInteraction = messageComponentCreateEvent.getMessageComponentInteraction();
-        String customId = messageComponentInteraction.getCustomId();
-        currentPlayer.setPlayerID(messageComponentInteraction.getUser().getName());
+        String customId = messageComponentCreateEvent.getMessageComponentInteraction().getCustomId();
+        currentPlayer.setPlayerID(messageComponentCreateEvent.getMessageComponentInteraction().getUser().getName());
         moveLocation(customId);
         //make a call to game logic
         //make a call to update board
-        messageComponentInteraction.createImmediateResponder().respond();
+        messageComponentCreateEvent.getMessageComponentInteraction().createImmediateResponder().respond();
         GameLogicResponse response = GameLogic.makeMove(row,column, currentPlayer, Bot.gameBoard);
         Bot.updateBoard();
         handleResponse(response,currentPlayer);

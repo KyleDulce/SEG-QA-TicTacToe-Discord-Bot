@@ -10,9 +10,10 @@ import java.util.concurrent.CompletableFuture;
 
 public class Bot implements MessageCreateListener{
 
-    public static String[][] gameBoard = new String[3][3];
+    public static String[][] gameBoard;
 
     public Bot(){
+        gameBoard = new String[3][3];
         for (int x = 0; x < gameBoard.length; x++) {
             for (int y = 0; y < gameBoard.length; y++) {
                 gameBoard[x][y] = "__";
