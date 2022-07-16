@@ -19,6 +19,14 @@ public class GameLogic {
         row--;
         column--;
 
+        if (row < 0 || row > 2){
+            return GameLogicResponse.ERROR;
+        }
+
+        if (column < 0 || column > 2){
+            return GameLogicResponse.ERROR;
+        }
+
         //If a player token is already in the board[row][column] tell the player they can't play
         if (!gameBoard[row][column].equals(emptyToken)){
             return GameLogicResponse.FAILURE;

@@ -4,5 +4,6 @@ public enum GameLogicResponse {
     SUCCESS,
     FAILURE,
     WIN,
-    TIE
+    TIE,
+    ERROR
 }

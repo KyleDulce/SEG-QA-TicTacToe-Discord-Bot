@@ -32,4 +32,12 @@ public class Player {
         else
             playerToken = player1Token;
     }
+
+    public String getPlayerID(){
+        return playerID;
+    }
+
+    public String getPlayerToken(){
+        return playerToken;
+    }
 }
