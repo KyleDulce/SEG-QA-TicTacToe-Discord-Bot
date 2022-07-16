@@ -18,6 +18,20 @@ public class PlayerTests {
     }
 
     @Test
+    public void TestPlayer1Constructor(){
+        Player player = new Player("", 1);
+
+        assertEquals(player1Token, player.getPlayerToken());
+    }
+
+    @Test
+    public void TestPlayer2Constructor(){
+        Player player = new Player("", 2);
+
+        assertEquals(player2Token, player.getPlayerToken());
+    }
+
+    @Test
     public void TestSetPlayerID(){
         Player player = new Player();
 
